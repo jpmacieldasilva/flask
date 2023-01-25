@@ -1,0 +1,121 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*colors*/
+.grey {
+    color: #414141;
+    background-color: #414141;
+}
+
+.purple {
+    color: #6923B8;
+    background-color: #6923B8;
+    ;
+}
+
+.ice {
+    color: #F6F6F6;
+    background-color: #F6F6F6;
+    ;
+}
+
+.white {
+    color: #f4f4f4;
+    background-color: #F4f4f4;
+}
+
+.text_white {
+    color: #f4f4f4;
+}
+
+.text_purple {
+    color: #6923B8;
+}
+
+.text_grey {
+    color: #414141;
+}
+
+/*template*/
+.header {
+    height: 48px;
+    position: static;
+    text-align: center;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 50;
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.container {
+    padding: 1rem;
+}
+
+.content {
+    padding-top: 64px;
+}
+
+.switch {
+    float: right !important
+}
+
+.list {
+    margin: 1rem 0;
+}
+
+.new-player {
+    margin-bottom: 2.2em;
+}
+
+.nav-bar {
+    height: 48px;
+    background-color: #6923B8;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+
+.nav-item {
+    width: 33%;
+}
+
+.nav-link {
+    height: 100%;
+    color: #F4f4f4;
+}
+
+/*boostrap reset*/
+.form-check,
+.form-switch {
+    padding: 0;
+}
+
+.form-check-label {
+    padding-top: 4px;
+}
+
+.form-check-input {
+    height: 1.2em;
+}
+
+input[type=submit] {
+    background: #6923B8;
+    color: white;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    height: 40px;
+    /* or any other hide text CSS technique */
+}
+

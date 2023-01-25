@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container content overlay">
+    <form action="/set_match/ {{ 1 }}" method="post">
+        <input class="col-12 secondary-button" name="is_started" type="submit">
+    </form>
+</div>
+{% endblock content %}

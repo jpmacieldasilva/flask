@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container content">
+    <form class="col-12 add_player" action="/add" method="post">
+        <input class="col-12 input-name" type="text" id='player' name="player" class="form-control" required>
+        <input class="new-player col-12 primary-button" type="submit" value="Adicionar">
+    </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,57 @@
+.search-players {
+    padding: 1em 0;
+}
+
+.search-players input {
+    background-color: #F6F6F6;
+}
+
+.list-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 0.5em;
+}
+
+.switch {
+    float: right !important;
+}
+
+.list {
+    margin: 0.5rem 0;
+}
+
+.form-check,
+.form-switch {
+    padding: 0;
+}
+
+.player_item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-check-label {
+    font-size: 1em;
+    padding: 4px;
+}
+
+.add_player {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.add_player input {
+    height: 40px;
+}
+
+.add_player .input-name {
+    background-color: #F6F6F6;
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    margin-bottom: 1em;
+}

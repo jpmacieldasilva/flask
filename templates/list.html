@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container content">
+    <h3>Lista de jogadores</h3>
+    <!-- <form class="col-12 search-players" role="search">
+        <input type="search" class="form-control" placeholder="Busque por jogadores..." aria-label="Search">
+    </form>
+    <hr>-->
+    {% if error %}
+    <div class="alert alert-danger" role="alert">
+        {{ error }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+    </div>
+    {% endif %}
+
+    {% if sucess %}
+    <div class="alert alert-success" role="alert">
+        {{ sucess }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+    </div>
+    {% endif %}
+
+    <div class="list-title">
+        <p>Nome</p>
+        <p>Disponível</p>
+    </div>
+
+    <div class="list form-check form-switch">
+        <ul class="list-group">
+            {% for player in players %}
+            <li class="list-group-item player_item">
+                <label class="form-check-label" for="">{{player.name}}</label>
+                <form class="" action="/remove/{{player.name}}" method="post">
+                    <input class="primary-button" type="submit" value="Deletar">
+                </form>
+                {% endfor %}
+        </ul>
+    </div>
+</div>
+
+<script>
+    check = document.querySelector('#flexSwitchCheckDefault');
+    check.addEventListener('click', function () {
+        this.classList.replace('black', 'white');
+    });
+</script>
+{% endblock content %}

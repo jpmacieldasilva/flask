@@ -1,0 +1,180 @@
+.timar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.timer-clock {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.timer-box {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F6F6;
+    padding: 1em;
+    border-radius: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-box hr {
+    width: 90%;
+}
+
+.timer-numb {
+    font-size: 4em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.timer-caption {
+    font-size: 1em;
+    text-align: center;
+}
+
+.timer-actions {
+    width: 100%;
+    padding: 0.5em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.timer-actions form {
+    width: 48%;
+}
+
+.score {
+    width: 100%;
+    background-color: #F6F6F6;
+    height: 180px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.score-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.score-info p {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.score-team {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: #6e6e6e;
+}
+
+.score-team span {
+    padding-top: 4px;
+}
+
+.score-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    margin-top: 1em;
+
+}
+
+.score-actions .secondary-button {
+    width: 100%;
+    margin-top: 1em;
+}
+
+.score-numbers {
+    padding-top: 1em;
+}
+
+.score-numbers button {
+    margin-top: 3em;
+}
+
+.teams {
+    width: 100%;
+    background-color: #F6F6F6;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.teams hr {
+    border: none;
+    border-left: 1px solid hsla(200, 10%, 50%, 100);
+    height: auto;
+    width: 1px;
+    padding: 0;
+}
+
+.team {
+    width: 50%;
+}
+
+
+.team-player {
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.players {
+    width: 100%;
+    background-color: #F6F6F6;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+
+.player {
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: #6923B8;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay form {
+    width: 100%;
+}
+
+.closeHome {
+    display: none;
+}
+
+.set_match {
+    margin-bottom: 1rem;
+}
+
+.reset_app {
+    margin-top: 1rem;
+    width: 100%;
+    background-color: red !important;
+}

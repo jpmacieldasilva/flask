@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container content">
+    <h3> Partida </h3>
+    <div class="container set_match">
+        <form action="/set_match" method="post">
+            <input class="col-12 primary-button" name="set_match" type="submit" value="Começar o fut!" {{'disabled' if
+                team1.players else '' }}>
+        </form>
+    </div>
+    <!--
+    <div class="timer">
+        <div class="timer-clock">
+            <div class="timer-box">
+                <p class="timer-numb">{{minutes}}</p>
+                <hr>
+                <p class="timer-caption">Minutos</p>
+            </div>
+            <div class="timer-box">
+                <p class="timer-numb">{{seconds}}</p>
+                <hr>
+                <p class="timer-caption">Segundos</p>
+            </div>
+        </div>
+        <div class="timer-actions">
+            <form action="/score/{{ 'team1' }}" method="post">
+                <input class="col-12 primary-button" type="submit" value="Play">
+            </form>
+            <form action="/reset_time/{{ True }}" method="post">
+                <input class="col-12 secondary-button" type="submit" value="Reset">
+            </form>
+        </div>
+    </div>
+    <hr>
+    -->
+    {% if resultado %}
+    <div class="alert alert-success" role="alert">
+        {{ resultado }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+    </div>
+    {% endif %}
+    <div class="score">
+        <div class="score-info">
+            <div class="score-team">
+                <i class="nav-button ri-football-line ri-4x"></i>
+                <span>Time 1</span>
+                <form class="score-actions" action="/score/{{ 'team1' }}" method="post">
+                    <input class="col-12 primary-button" type="submit" value="Gol">
+                </form>
+            </div>
+            <div class="score-numbers">
+                <p> {{team1.score}} - {{team2.score}} </p>
+                <button class="score-actions secondary-button" data-bs-toggle="modal" data-bs-target="#end_match">
+                    Encerrar partida</button>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="end_match" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Encerrar partida?</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="secondary-button" data-bs-dismiss="modal">Voltar</button>
+                            <form class="" action="/end_match" method="post">
+                                <input class="primary-button" type="submit" value="Encerrar Partida"
+                                    data-bs-dismiss="modal">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="score-team">
+                <i class="nav-button ri-football-line ri-4x"></i>
+                <span>Time 2</span>
+                <form class="score-actions" action="/score/{{ 'team2' }}" method="post">
+                    <input class="col-12 primary-button" type="submit" value="Gol">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="teams">
+        <div class="team">
+            <h3> Time 1 </h3>
+            <ul class="team-list">
+                {% for player in team1.players %}
+                <li class="team-player">
+                    {{ player }}
+                    {% endfor %}
+            </ul>
+        </div>
+        <hr>
+        <div class="team">
+            <h3>Time 2</h3>
+            <ul class="team-list">
+                {% for player in team2.players %}
+                <li class="team-player">
+                    {{player}}
+                    {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div class="players">
+        <h3>Próximos</h3>
+        <ul class="list-players">
+            {% for player in avaliables %}
+            <li class="player">
+                {{player}}
+                {% endfor %}
+        </ul>
+    </div>
+    <button class="reset_app primary-button" data-bs-toggle="modal" data-bs-target="#reset_app">
+        Encerrar o fut</button>
+    <!-- Modal -->
+    <div class="modal fade" id="reset_app" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Acabar o Fut?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="secondary-button" data-bs-dismiss="modal">Voltar</button>
+                    <form class="" action="/reset" method="post">
+                        <input class="primary-button" type="submit" value="Encerrar o fut" data-bs-dismiss="modal">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function showHome() {
+        var element = document.getElementById("showHome");
+        element.classList.add("closeHome");
+    }
+</script>
+{% endblock content %}
